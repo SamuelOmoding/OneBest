@@ -11,8 +11,8 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 1,
       name: 'Premium Cotton T-Shirt',
-      price: 29.99,
-      originalPrice: 39.99,
+      price: 4.00,
+      originalPrice: 6.99,
       image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=400&fit=crop',
       category: 'clothing',
       rating: 4.8,
@@ -21,8 +21,8 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 2,
       name: 'Designer Sneakers',
-      price: 89.99,
-      originalPrice: 119.99,
+      price: 40.00,
+      originalPrice: 59.99,
       image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=400&fit=crop',
       category: 'shoes',
       rating: 4.9,
@@ -49,7 +49,7 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 5,
       name: 'Classic Denim Jacket',
-      price: 69.99,
+      price: 45.00,
       image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=400&fit=crop',
       category: 'clothing',
       rating: 4.5
@@ -90,7 +90,7 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 10,
       name: 'Formal Leather Shoes',
-      price: 129.99,
+      price: 125.00,
       image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=400&fit=crop',
       category: 'shoes',
       rating: 4.7
@@ -98,7 +98,7 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 11,
       name: 'Casual Sneakers',
-      price: 69.99,
+      price: 65.00,
       image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=400&fit=crop',
       category: 'shoes',
       rating: 4.6
@@ -106,7 +106,7 @@ const ProductList = ({ activeCategory = 'all' }) => {
        {
     id: 12,
     name: "Red Dress",
-    price: 2500,
+    price: 25.00,
     image: "/assets/red-dress.jpg",
     category: "Women",
     isNew: true,
@@ -115,7 +115,7 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 13,
       name: "Blue Jeans",
-      price: 80,
+      price: 12.00,
       image: "/assets/blue-jeans.jpg",
       category: "Men",
       isSale: true,

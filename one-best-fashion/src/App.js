@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Features from "./components/Features";
-import Testimonials from "./components/Testimonials";
 import { CartProvider } from "./context/CartContext";
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Features />
-        <Testimonials />
         <Footer />
       </BrowserRouter>
     </CartProvider>

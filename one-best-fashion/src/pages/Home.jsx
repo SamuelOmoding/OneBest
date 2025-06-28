@@ -1,12 +1,10 @@
 import HeroSection from "../components/HeroSection";
-// import ProductCard from "../components/ProductCard";
-// import ProductList from "../components/ProductList";
+import Categories from "../components/CategorySection";
 
 const Home = () => (
   <div>
     <HeroSection />
-    {/* <ProductCard /> */}
-    {/* <ProductList title="Featured Products" /> */}
+    <Categories />
   </div>
 );
 

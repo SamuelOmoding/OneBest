@@ -1,13 +1,16 @@
 // src/components/ProductCard.jsx
 import React from 'react';
-import { Heart, Star } from 'lucide-react';
-import { ShoppingCart } from 'lucide-react';
+import { Heart, Star, ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
+// Static conversion rate from USD to KES
+const USD_TO_KES = 128;
 
 const ProductCard = ({ product, onAddToCart, onAddToWishlist }) => {
   const { wishlistItems } = useCart();
   const isInWishlist = wishlistItems.some(item => item.id === product.id);
+
+  const convertToKES = (usd) => (usd * USD_TO_KES).toFixed(0);
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -54,9 +57,13 @@ const ProductCard = ({ product, onAddToCart, onAddToWishlist }) => {
         
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-green-600">${product.price}</span>
+            <span className="text-2xl font-bold text-green-600">
+              KSh {convertToKES(product.price)}
+            </span>
             {product.originalPrice && (
-              <span className="text-lg text-gray-500 line-through">${product.originalPrice}</span>
+              <span className="text-lg text-gray-500 line-through">
+                KSh {convertToKES(product.originalPrice)}
+              </span>
             )}
           </div>
         </div>
@@ -74,3 +81,7 @@ const ProductCard = ({ product, onAddToCart, onAddToWishlist }) => {
 };
 
 export default ProductCard;
+
+
+
+

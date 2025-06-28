@@ -2,8 +2,12 @@ import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import { Trash2, Plus, Minus } from 'lucide-react';                            
 
+const USD_TO_KES = 128;
+
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
+
+  const convertToKES = (usd) => (usd * USD_TO_KES).toFixed(0);
 
   if (cartItems.length === 0) {
     return (
@@ -39,7 +43,9 @@ const Cart = () => {
                   />
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
-                    <p className="text-green-600 font-bold">${item.price}</p>
+                    <p className="text-green-600 font-bold">
+                      KSh {convertToKES(item.price)} x {item.quantity}
+                    </p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <button
@@ -73,7 +79,7 @@ const Cart = () => {
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between">
                   <span>Subtotal:</span>
-                  <span>${getCartTotal().toFixed(2)}</span>
+                  <span>KSh {convertToKES(getCartTotal())}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Shipping:</span>
@@ -82,7 +88,7 @@ const Cart = () => {
                 <hr />
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total:</span>
-                  <span>${getCartTotal().toFixed(2)}</span>
+                  <span>KSh {convertToKES(getCartTotal())}</span>
                 </div>
               </div>
               <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors mb-2">
@@ -103,3 +109,6 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+

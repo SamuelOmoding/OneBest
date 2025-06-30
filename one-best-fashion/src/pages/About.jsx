@@ -1,7 +1,7 @@
 // src/components/About.jsx
 import React from 'react';
 import Testimonials from '../components/Testimonials'; 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const About = () => {
   return (

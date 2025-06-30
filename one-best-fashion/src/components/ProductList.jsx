@@ -65,25 +65,25 @@ const ProductList = ({ activeCategory = 'all' }) => {
     },
     {
       id: 7,
-      name: 'Stylish Sunglasses',
-      price: 59.99,
-      image: 'https://images.unsplash.com/photo-1521747116042-5a810fda9664?w=300&h=400&fit=crop',
+      name: 'Stylish Woman',
+      price: 50.00,
+      image: '/images/categories/women.jpeg',
       category: 'accessories',
       rating: 4.4
     },
     {
       id: 8,
       name: 'Casual Polo Shirt',
-      price: 34.99,
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&h=400&fit=crop',
+      price: 8.8125,
+      image: '/images/catalog/Polo.jpeg',
       category: 'clothing',
       rating: 4.3
     },
     {
       id: 9,
       name: 'Trendy Backpack',
-      price: 79.99,
-      image: 'https://images.unsplash.com/photo-1521747116042-5a810fda9664?w=300&h=400&fit=crop',
+      price: 19.53125,
+      image: '/images/catalog/Backpack.jpeg',
       category: 'accessories',
       rating: 4.5
     },
@@ -91,23 +91,23 @@ const ProductList = ({ activeCategory = 'all' }) => {
       id: 10,
       name: 'Formal Leather Shoes',
       price: 125.00,
-      image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=400&fit=crop',
+      image: '/images/catalog/Leathershoes.jpeg',
       category: 'shoes',
       rating: 4.7
     },
     {
       id: 11,
       name: 'Casual Sneakers',
-      price: 65.00,
-      image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=400&fit=crop',
+      price: 65.80,
+      image: '/images/catalog/SneakersB.jpeg',
       category: 'shoes',
       rating: 4.6
     },
        {
     id: 12,
-    name: "Red Dress",
-    price: 25.00,
-    image: "/assets/red-dress.jpg",
+    name: "Nike",
+    price: 66.40625,
+    image: '/images/catalog/NikeS.jpeg',
     category: "Women",
     isNew: true,
     rating: 4.9
@@ -115,8 +115,8 @@ const ProductList = ({ activeCategory = 'all' }) => {
     {
       id: 13,
       name: "Blue Jeans",
-      price: 12.00,
-      image: "/assets/blue-jeans.jpg",
+      price: 15.625,
+      image: "/images/catalog/LightBlueWash.jpeg",
       category: "Men",
       isSale: true,
       rating: 4.5

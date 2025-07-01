@@ -17,21 +17,21 @@ const Contacts = () => {
               <MapPin className="w-6 h-6 text-green-600 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Our Location</h4>
-                <p className="text-gray-600">123 Fashion Street, Nairobi, Kenya</p>
+                <p className="text-gray-600">Kasarani-Mwiki Rd, Nairobi, Kenya</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Phone className="w-6 h-6 text-green-600 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Phone</h4>
-                <p className="text-gray-600">+254 712 345 678</p>
+                <p className="text-gray-600">+254 796 478 429</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Mail className="w-6 h-6 text-green-600 mt-1" />
               <div>
                 <h4 className="font-bold text-gray-700">Email</h4>
-                <p className="text-gray-600">support@onebestfashion.com</p>
+                <p className="text-gray-600">oonebestfashion@gmail.com</p>
               </div>
             </div>
           </div>

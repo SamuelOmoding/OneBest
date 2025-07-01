@@ -54,7 +54,7 @@ const Footer = () => (
         <Music2 size={20} />
       </a>
        <a
-        href="mailto:onebestfashion@gmail.com"
+        href="mailto:oonebestfashion@gmail.com"
         style={{ color: '#423E53' }}
         aria-label="Email"
       >

@@ -39,7 +39,6 @@ const ProductCard = ({ product, onAddToCart, onAddToWishlist }) => {
           <Heart className="w-5 h-5" fill={isInWishlist ? 'currentColor' : 'none'} />
         </button>
       </div>
-      
       <div className="p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">{product.name}</h3>
         
@@ -66,6 +65,8 @@ const ProductCard = ({ product, onAddToCart, onAddToWishlist }) => {
               </span>
             )}
           </div>
+          <p className="text-sm text-gray-600 mb-2">Available: {product.quantity}</p>
+
         </div>
         
         <button

@@ -29,7 +29,6 @@ const categories = [
   }
 ];
 
-// Subcategories component for when a main category is selected
 export const SubCategories = ({ mainCategory, subcategories }) => {
   return (
     <div className="bg-white py-8 border-b border-gray-200">
@@ -57,7 +56,6 @@ export const SubCategories = ({ mainCategory, subcategories }) => {
   );
 };
 
-// Main Categories component
 const Categories = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
@@ -73,7 +71,6 @@ const Categories = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        {/* Categories Grid - 3 columns for main categories */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {categories.map((category, index) => (
             <Link 
@@ -82,7 +79,6 @@ const Categories = () => {
               className="group relative block rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Image Container */}
               <div className="relative h-96 overflow-hidden">
                 <img
                   src={category.image}
@@ -97,7 +93,6 @@ const Categories = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
 
-              {/* Content Overlay */}
               <div className="absolute inset-0 flex flex-col justify-end p-8">
                 <div className="transform group-hover:translate-y-[-8px] transition-transform duration-300">
                   <h3 className="text-white text-3xl font-bold mb-2 drop-shadow-lg">
@@ -123,7 +118,6 @@ const Categories = () => {
                     </div>
                   </div>
                   
-                  {/* Arrow Icon */}
                   <div className="flex items-center opacity-0 group-hover:opacity-100 transition-all duration-300 delay-200">
                     <span className="text-white font-semibold mr-2">Shop Now</span>
                     <svg 
@@ -138,7 +132,6 @@ const Categories = () => {
                 </div>
               </div>
 
-              {/* Shine Effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
               </div>
@@ -146,7 +139,6 @@ const Categories = () => {
           ))}
         </div>
 
-        {/* New Arrivals Section */}
         <div className="bg-gradient-to-r from-black to-green-600 rounded-2xl p-8 text-center text-white shadow-xl">
           <h3 className="text-3xl font-bold mb-4">New Arrivals</h3>
           <p className="text-xl mb-6 text-white/90">Fresh styles just dropped across all categories</p>
@@ -165,6 +157,5 @@ const Categories = () => {
   );
 };
 
-// Export both components and categories data for use in other parts of the app
 export { categories };
 export default Categories;

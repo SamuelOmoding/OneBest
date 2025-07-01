@@ -1,12 +1,10 @@
-import React, { createContext, useContext } from 'react';
-import { useReducer } from 'react';
-
+import React, { createContext, useContext, useReducer } from 'react';
 
 const CartContext = createContext();
 
 const cartReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_TO_CART':
+    case 'ADD_TO_CART': {
       const existingItem = state.cartItems.find(item => item.id === action.payload.id);
       if (existingItem) {
         return {
@@ -22,6 +20,7 @@ const cartReducer = (state, action) => {
         ...state,
         cartItems: [...state.cartItems, { ...action.payload, quantity: 1 }]
       };
+    }
 
     case 'REMOVE_FROM_CART':
       return {
@@ -39,13 +38,14 @@ const cartReducer = (state, action) => {
         ).filter(item => item.quantity > 0)
       };
 
-    case 'ADD_TO_WISHLIST':
+    case 'ADD_TO_WISHLIST': {
       const existingWishlistItem = state.wishlistItems.find(item => item.id === action.payload.id);
       if (existingWishlistItem) return state;
       return {
         ...state,
         wishlistItems: [...state.wishlistItems, action.payload]
       };
+    }
 
     case 'REMOVE_FROM_WISHLIST':
       return {
@@ -59,6 +59,30 @@ const cartReducer = (state, action) => {
         cartItems: []
       };
 
+    case 'SET_PRODUCTS':
+      return {
+        ...state,
+        products: action.payload
+      };
+
+    case 'REDUCE_STOCK': {
+      const updatedProducts = state.products.map(product => {
+        const cartItem = state.cartItems.find(item => item.id === product.id);
+        if (cartItem) {
+          return {
+            ...product,
+            stock: Math.max(0, product.stock - cartItem.quantity)
+          };
+        }
+        return product;
+      });
+      return {
+        ...state,
+        products: updatedProducts,
+        cartItems: []
+      };
+    }
+
     default:
       return state;
   }
@@ -67,7 +91,8 @@ const cartReducer = (state, action) => {
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, {
     cartItems: [],
-    wishlistItems: []
+    wishlistItems: [],
+    products: []
   });
 
   const addToCart = (product) => {
@@ -94,6 +119,14 @@ const CartProvider = ({ children }) => {
     dispatch({ type: 'CLEAR_CART' });
   };
 
+  const setProducts = (products) => {
+    dispatch({ type: 'SET_PRODUCTS', payload: products });
+  };
+
+  const reduceStockOnPurchase = () => {
+    dispatch({ type: 'REDUCE_STOCK' });
+  };
+
   const getCartTotal = () => {
     return state.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   };
@@ -110,12 +143,15 @@ const CartProvider = ({ children }) => {
     <CartContext.Provider value={{
       cartItems: state.cartItems,
       wishlistItems: state.wishlistItems,
+      products: state.products,
       addToCart,
       removeFromCart,
       updateQuantity,
       addToWishlist,
       removeFromWishlist,
       clearCart,
+      setProducts,
+      reduceStockOnPurchase,
       getCartTotal,
       getCartItemsCount,
       getWishlistItemsCount
@@ -134,3 +170,7 @@ const useCart = () => {
 };
 
 export { CartProvider, useCart };
+
+
+
+

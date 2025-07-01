@@ -18,6 +18,7 @@ const Navbar = ({ activeCategory, setActiveCategory }) => {
           <div className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>OneBest <span className="text-green-700">Fashion</span></div>
           <nav className="hidden md:flex space-x-8">
             <a href="/" className="text-gray-900 hover:text-green-700 transition hover:underline">Home</a>
+            <a href="/categories" className="text-gray-900 hover:text-green-700 transition hover:underline">Categories</a>
             <a href="/shop" className="text-gray-900 hover:text-green-700 transition hover:underline">Shop</a>
             <a href="/about" className="text-gray-900 hover:text-green-700 transition hover:underline">About</a>
             <a href="/contact" className="text-gray-900 hover:text-green-700 transition hover:underline">Contact</a>
@@ -56,6 +57,7 @@ const Navbar = ({ activeCategory, setActiveCategory }) => {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               <a href="/" className="text-gray-900 hover:text-green-700 transition">Home</a>
+              <a href="/categories" className="text-gray-900 hover:text-green-700 transition">Categories</a>
               <a href="/shop" className="text-gray-900 hover:text-green-700 transition">Shop</a>
               <a href="/about" className="text-gray-900 hover:text-green-700 transition">About</a>
               <a href="/contact" className="text-gray-900 hover:text-green-700 transition">Contact</a>

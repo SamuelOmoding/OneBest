@@ -12,15 +12,19 @@ import Contact from "./pages/Contact";
 import Features from "./components/Features";
 import Checkout from "./components/Checkout";
 import { CartProvider } from "./context/CartContext";
+import SearchResults from "./pages/SearchResults";
+import { SearchProvider } from "./context/SearchContext";
 
 function App() {
   return (
+    <SearchProvider>
     <CartProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<SearchResults />} />
           <Route path="/categories" element={<CategorySection />} />
           <Route path="/category/:id" element={<Shop />} />
           <Route path="/category/:id/:subId" element={<Shop />} />
@@ -43,6 +47,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </CartProvider>
+    </SearchProvider>
   );
 }
 

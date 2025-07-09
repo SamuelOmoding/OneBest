@@ -7,19 +7,19 @@ const testimonials = [
     name: 'Sarah Wanjiku',
     text: 'Amazing quality and fast delivery! My new favorite fashion store.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b913?w=60&h=60&fit=crop&crop=face'
+    image: '/images/categories/women.jpeg',
   },
   {
     name: 'Colbert Ojiambo',
     text: 'Great prices and trendy styles. Highly recommend OneBest Fashion!',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face'
+    image: '/images/categories/men.jpeg'
   },
   {
     name: 'Emmanuel Emoit',
     text: 'Love the variety and customer service. Will definitely shop again.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face'
+    image: '/images/Photo.jpeg'
   }
 ];
 

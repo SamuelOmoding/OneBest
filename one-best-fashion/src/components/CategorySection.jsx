@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 // Main categories data
 const categories = [
   {
-    name: "Women's Fashion",
+    name: "Women",
     image: '/images/categories/women.jpeg',
     link: '/shop?category=women',
-    description: 'Trendy styles & essentials',
+    description: 'Trendy styles, Elegant & Contemporary',
     color: 'from-pink-500 to-rose-500',
     subcategories: ['Dresses', 'Tops & Blouses', 'Bottoms', 'Outerwear', 'Activewear', 'Lingerie']
   },
   {
-    name: "Men's Fashion",
+    name: "Men",
     image: '/images/categories/men.jpeg',
     link: '/shop?category=men',
-    description: 'Modern fits & classics',
+    description: 'Sophisticated Modern fits & classics',
     color: 'from-blue-600 to-indigo-600',
     subcategories: ['Shirts', 'T-Shirts & Polos', 'Pants & Jeans', 'Outerwear', 'Activewear', 'Underwear']
   },
@@ -26,6 +26,14 @@ const categories = [
     description: 'Shoes for every occasion',
     color: 'from-amber-500 to-orange-500',
     subcategories: ['Sneakers', 'Dress Shoes', 'Boots', 'Sandals', 'Athletic Shoes', 'Casual Shoes']
+  },
+  {
+    name: 'Accessories',
+    image: '/images/categories/Backpack.jpeg',
+    link: '/shop?category=accessories',
+    description: 'Luxury Details to Complete your look',
+    color: 'from-purple-500 to-violet-500',
+    subcategories: ['Bags & Backpacks', 'Jewelry', 'Hats & Caps', 'Belts', 'Sunglasses', 'Scarves & Gloves']
   }
 ];
 
@@ -66,12 +74,12 @@ const Categories = () => {
             Shop by Category
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our carefully curated collections for men, women, and footwear
+            Explore our diverse range of fashion categories, each crafted to meet your unique style preferences.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           {categories.map((category, index) => (
             <Link 
               to={category.link} 
@@ -146,7 +154,7 @@ const Categories = () => {
             to="/shop?filter=new-arrivals" 
             className="inline-flex items-center px-8 py-4 bg-white text-green-800 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            Shop New Arrivals
+            New Arrivals
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

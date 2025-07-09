@@ -160,6 +160,12 @@ const Navbar = ({ activeCategory, setActiveCategory }) => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+      {/* Top bar */}
+      <div className="bg-black text-2xl font-bold text-white py-2">
+        <div className="container mx-auto text-center text-sm">
+          Free shipping on orders over $50 | New arrivals weekly | Quality Guarantee/30-day money back guarantee
+        </div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>

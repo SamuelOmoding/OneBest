@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Features from "./components/Features";
+// import Features from "./components/Features";
 import Checkout from "./components/Checkout";
 import { CartProvider } from "./context/CartContext";
 import SearchResults from "./pages/SearchResults";
@@ -43,7 +43,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
-        <Features />
+        {/* <Features /> */}
         <Footer />
       </BrowserRouter>
     </CartProvider>

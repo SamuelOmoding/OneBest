@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Search, Grid, List, Heart, ShoppingBag, Star } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-import { searchProducts, filterProducts, sortProducts } from '../data/products';
+import { searchProducts, filterProducts, sortProducts, products } from '../data/products';
 
 // Static conversion rate from USD to KES
 const USD_TO_KES = 128;
@@ -34,7 +34,7 @@ const SearchResults = () => {
     
     // Simulate API call
     setTimeout(() => {
-      const results = searchProducts(query);
+      const results = searchProducts(query, products);
       setSearchResults(results);
       setFilteredResults(results);
       setLoading(false);
@@ -68,6 +68,7 @@ const SearchResults = () => {
     if (product.sizes && product.sizes.length > 0) {
       // For now, we'll add the first available size
       // In a real app, you'd want to show a size selector modal
+      // or dropdown to let the user choose a size
       const productWithSize = { ...product, selectedSize: product.sizes[0] };
       addToCart(productWithSize);
     } else {

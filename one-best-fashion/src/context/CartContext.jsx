@@ -122,6 +122,10 @@ const CartProvider = ({ children }) => {
   });
 };
 
+const isInWishlist = (productId) => {
+  return state.wishlistItems.some((item) => item.id === productId);
+};
+
 
   const addToWishlist = (product) => {
     dispatch({ type: 'ADD_TO_WISHLIST', payload: product });
@@ -163,6 +167,7 @@ const CartProvider = ({ children }) => {
       addToCart,
       removeFromCart,
       updateQuantity,
+      isInWishlist,
       addToWishlist,
       removeFromWishlist,
       clearCart,

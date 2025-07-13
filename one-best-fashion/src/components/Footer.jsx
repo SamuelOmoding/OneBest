@@ -37,8 +37,7 @@ const Footer = () => (
 
     {/* Footer content */}
     <div className="container mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Brand Info */}
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-10">
         <div>
           <h3 className="text-xl font-bold mb-4">
             OneBest <span className="text-green-700">Fashion</span>
@@ -89,8 +88,20 @@ const Footer = () => (
             </a>
           </div>
         </div>
+
+        <div className="flex justify-center md:justify-end">
+          <img
+            src="/images/logo.jpeg"
+            alt="OneBest Fashion Logo"
+            width={80}
+            height={25}
+            className="h-4/5 w-1/4 object-contain"
+          />
+        </div>
       </div>
     </div>
+
+
 
     {/* Bottom bar */}
     <div className="container mx-auto px-4 py-8">
